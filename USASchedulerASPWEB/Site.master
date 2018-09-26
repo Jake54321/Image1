@@ -1,0 +1,98 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="USASchedulerASPWEB.SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1" />--%>
+    <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="~/Content/Site.css" rel="stylesheet" /> 
+
+    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/popper.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <form runat="server">
+        
+    <dx:ASPxMenu ID="mMain" runat="server" Font-Bold="true" ShowAsToolbar="true" Theme="Office2010Blue" AllowSelectItem="True" ShowPopOutImages="True">
+        <Items>
+            <dx:MenuItem Text="Home">
+                <ItemStyle Width="200px" />
+                <Items>
+                    <dx:MenuItem Text="Home" NavigateUrl="~/Default.aspx">                                
+                    </dx:MenuItem>
+                </Items>
+            </dx:MenuItem>
+            <dx:MenuItem Text="1) Input">
+                <ItemStyle Width="200px" />
+                <Items>
+
+                            <dx:MenuItem Text="Course Manager" NavigateUrl="~/CourseManager.aspx">
+                                <Image IconID="actions_changeview_16x16devav"></Image>
+                            </dx:MenuItem>
+                            <dx:MenuItem  Text="Student Requests" NavigateUrl="~/StudentRequests.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Sections" NavigateUrl="~/Sections.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="School Setup" NavigateUrl="~/SchoolSetup.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Timeline Requests" NavigateUrl="~/TimelineRequests.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Opening Stats" NavigateUrl="~/OpeningStats.aspx" >
+                            </dx:MenuItem>
+                </Items>
+            </dx:MenuItem>
+            <dx:MenuItem Text="2) Teachers">
+                <ItemStyle Width="200px" />
+                        <Items>
+                            <dx:MenuItem Text="Per Teacher" NavigateUrl="~/PerTeacher.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Alphabetical" NavigateUrl="~/Alphabetical.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="By Dept" NavigateUrl="~/ByDept.aspx" >
+                            </dx:MenuItem>
+                        </Items>
+            </dx:MenuItem>
+            <dx:MenuItem Text="3) Students">
+                <ItemStyle Width="200px" />
+<%--                        <Items>
+                            <dx:MenuItem Text="Per Teacher">
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Alphabetical">
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="By Dept">
+                            </dx:MenuItem>
+                        </Items>--%>
+            </dx:MenuItem>
+            <dx:MenuItem Text="System">
+                <ItemStyle Width="200px" />
+                        <Items>
+                            <dx:MenuItem Text="Scenario" NavigateUrl="~/Scenario.aspx">
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Export to Data File" NavigateUrl="~/ExportToDataFile.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Support Ticket" NavigateUrl="~/SupportTicket.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="Videos" NavigateUrl="~/Videos.aspx" >
+                            </dx:MenuItem>
+                            <dx:MenuItem Text="District Progress" NavigateUrl="~/DistrictProgress.aspx">
+                            </dx:MenuItem>
+                        </Items>
+            </dx:MenuItem>
+
+        </Items>
+    </dx:ASPxMenu>
+
+            <div class="container">
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <footer>
+                   
+                </footer>
+            </div>
+    </form>
+</body>
+</html>
